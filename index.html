@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Florence</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Curseur personnalisé -->
+    <div id="cursor"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar" id="navbar">
+        <div class="florb">
+            <span class="name">flo.rb</span>
+        </div>
+        <div class="links">
+            <a href="#">Accueil</a>
+            <a href="#about">À propos</a>
+            <a href="#experience">Expérience</a>
+            <a href="#projects">Projets</a>
+            <a href="./images/CV Alternance Ecole.pdf" class="contact-btn">CV</a>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero" id="home">
+        <div class="hero-circle"></div>
+        <div class="hero-content">
+            <span class="hero-tag">Étudiante en Informatique — IUT d'Orsay</span>
+            <h1>Bonjour, je suis<br><em>Florence Regnier-Beck</em></h1>
+            <p class="hero-sub">Étudiante en DUT Informatique, future ingénieure DevSecOps. Je me forme chaque jour pour
+                apprendre et me surpasser.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#about" class="btn btn-outline">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="hero-img-wrap">
+            <img src="images/flo.jpg" alt="Florence Regnier-Beck">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Ouverte aux opportunités d'alternance
+            </div>
+        </div>
+
+        <div class="scroll-hint">
+            <div class="scroll-line"></div>
+            défiler
+        </div>
+    </section>
+
+    <!-- ── À PROPOS ── -->
+    <section id="about" class="about">
+        <div class="about-inner">
+            <div class="about-left reveal-left">
+                <p class="section-label">01 — À propos</p>
+                <h2>Construire avec curiosité &amp; précision</h2>
+                <p>Je suis étudiante en DUT Informatique à l'IUT d'Orsay, avec l'ambition de devenir ingénieure
+                    DevSecOps. Passionnée par la cybersécurité et les nouvelles technologies, je m'efforce chaque jour
+                    d'apprendre quelque chose de nouveau, que ce soit sur la sécurisation des systèmes ou
+                    l'automatisation.</p>
+                <p>J'explore actuellement React, Next.js et Docker pour élargir mes compétences, et je construis au fil du
+                    temps une base solide en développement. Rigoureuse, curieuse et autonome — j'apprends vite et j'aime
+                    aller au fond des choses.</p>
+                <div class="interests">
+                    <span class="interest-tag">Jeux vidéo</span>
+                    <span class="interest-tag">Lecture</span>
+                    <span class="interest-tag">Musique</span>
+                    <span class="interest-tag">Karaté</span>
+                    <span class="interest-tag">Handball</span>
+                </div>
+            </div>
+
+            <div class="about-right reveal-right">
+                <div class="skills-group">
+                    <h4>Développement</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">HTML / CSS</span>
+                        <span class="skill-tag highlight">JavaScript</span>
+                        <span class="skill-tag">PHP · Symfony</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C / C++</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <h4>Données & Outils</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL / PL-SQL</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">Git · GitHub · GitLab</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Visual Paradigm</span>
+                        <span class="skill-tag">Docker</span>
+
+
+                    </div>
+                </div>
+                <div class="skills-group">
+                    <h4>Certifications & Méthodes</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag highlight">Cisco — Intro à la cybersécurité</span>
+                        <span class="skill-tag">Agile / Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EXPÉRIENCE ── -->
+    <section id="experience" class="experience">
+        <div class="experience-inner">
+            <p class="section-label">02 — Expérience professionnelle</p>
+            <h2>Terrain &amp; pratique</h2>
+
+            <div class="exp-card reveal">
+                <div>
+                    <p class="exp-company">Groupe AVRIL · Paris</p>
+                    <h3 class="exp-title">Stage — Développeuse Back-end</h3>
+                    <p class="exp-desc">
+                        Au sein du groupe AVRIL, j'ai contribué au développement back-end d'une application interne en
+                        utilisant le framework Symfony avec Doctrine ORM et le langage PHP. J'ai travaillé en
+                        environnement DDEV et utilisé DBeaver pour la gestion de base de données. Ce stage m'a permis de
+                        découvrir un environnement professionnel agile, avec une gestion rigoureuse des branches sur
+                        Azure DevOps — revue de code, résolution de conflits, suivi des tâches.
+                    </p>
+                    <div class="exp-tags">
+                        <span class="exp-tag">PHP</span>
+                        <span class="exp-tag">Symfony</span>
+                        <span class="exp-tag">Doctrine</span>
+                        <span class="exp-tag">DDEV</span>
+                        <span class="exp-tag">DBeaver</span>
+                        <span class="exp-tag">Azure DevOps</span>
+                        <span class="exp-tag">Git</span>
+                    </div>
+                </div>
+                <p class="exp-date">Juin. 2025 — Août 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PROJETS ── -->
+    <section id="projects" class="projects">
+        <div class="projects-header reveal">
+            <div>
+                <p class="section-label">03 — Travaux</p>
+                <h2>Projets</h2>
+            </div>
+            <span class="projects-count">5 projets sélectionnés</span>
+        </div>
+
+        <div class="cards-grid">
+
+            <!-- Carte 1 -->
+            <div class="card reveal" style="transition-delay:.1s">
+                <div class="card-img">
+                    <img src="./images/Infrastructure.png" alt="Infrastructure réseau">
+                    <span class="card-num">01</span>
+                    <div class="card-overlay">
+                        <span class="overlay-text">Projet académique</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-type">Réseau · Sécurité · Linux</p>
+                    <h3>Infrastructure réseau</h3>
+                    <p>Configuration complète d'une infrastructure réseau : adressage IP, DHCP, DNS, routage. Analyse du
+                        trafic avec Wireshark pour comprendre les échanges entre machines et diagnostiquer des problèmes
+                        réseau en conditions réelles.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">TCP/IP</span>
+                        <span class="card-tag">Wireshark</span>
+                        <span class="card-tag">DHCP / DNS</span>
+                        <span class="card-tag">Linux</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 2 -->
+            <div class="card reveal" style="transition-delay:.2s">
+                <div class="card-img">
+                    <img src="./images/ciup_menus.png" alt="Application de gestion CIUP">
+                    <span class="card-num">02</span>
+                    <div class="card-overlay">
+                        <span class="overlay-text">Projet académique · Équipe de 4</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-type">Java · Swing · MVC</p>
+                    <h3>Gestion des étudiants — CIUP</h3>
+                    <p>Application desktop de gestion des étudiants, chambres et menus de la Cité Internationale
+                        Universitaire de Paris. Développée en équipe de 4 en suivant le patron MVC, avec maquettage sur
+                        Figma en amont et gestion de branches sur GitLab.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">Java</span>
+                        <span class="card-tag">Swing</span>
+                        <span class="card-tag">MVC</span>
+                        <span class="card-tag">Figma</span>
+                        <span class="card-tag">GitLab</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 3 -->
+            <div class="card reveal" style="transition-delay:.3s">
+                <div class="card-img">
+                    <img src="./images/todo-app.png" alt="Application To-Do">
+                    <span class="card-num">03</span>
+                    <div class="card-overlay">
+                        <span class="overlay-text">Projet personnel</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-type">HTML · CSS · JavaScript</p>
+                    <h3>Application To-Do</h3>
+                    <p>Application web de gestion de tâches, épurée et responsive. Ajout, suppression, marquage comme
+                        fait.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">HTML</span>
+                        <span class="card-tag">CSS</span>
+                        <span class="card-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 4 -->
+            <div class="card reveal" style="transition-delay:.1s">
+                <div class="card-img">
+                    <img src="./images/bmi_maquette.png" alt="Calculateur d'IMC">
+                    <span class="card-num">04</span>
+                    <div class="card-overlay">
+                        <span class="overlay-text">Projet personnel</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-type">HTML · CSS · JavaScript</p>
+                    <h3>Calculateur d'IMC</h3>
+                    <p>Application web qui calcule l'Indice de Masse Corporelle à partir du poids et de la taille.
+                        Affichage du résultat avec sa catégorie (insuffisance, normal, surpoids…) et interface conçue à
+                        partir d'une maquette Figma.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">HTML</span>
+                        <span class="card-tag">CSS</span>
+                        <span class="card-tag">JavaScript</span>
+                        <span class="card-tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 5 -->
+            <div class="card reveal" style="transition-delay:.2s">
+                <div class="card-img">
+                    <img src="./images/image.png" alt="Site ZoneX">
+                    <span class="card-num">05</span>
+                    <div class="card-overlay">
+                        <span class="overlay-text">Projet académique · Équipe de 3</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <p class="card-type">HTML · CSS · Travail d'équipe</p>
+                    <h3>Site web ZoneX</h3>
+                    <p>Création de la page d'accueil de "ZoneX", une entreprise fictive proposant des jeux interactifs
+                        sans casque VR. Réalisé en équipe de 3.</p>
+                    <div class="card-tags">
+                        <span class="card-tag">HTML</span>
+                        <span class="card-tag">CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte 6 — Bientôt -->
+            <div class="card coming-soon reveal" style="transition-delay:.3s">
+                <div class="coming-inner">
+                    <h3>Bientôt disponible</h3>
+                    <p>Je travaille sur le prochain projet.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span class="foot-name">flo.rb</span>
+        <p>© 2025 Florence Regnier-Beck</p>
+        <div class="foot-links">
+            <a href="https://github.com/flo-rb" target="_blank">GitHub</a>
+            <a href="mailto:fregnierbeck@gmail.com">Contact</a>
+            <a href="./images/CV Alternance Ecole.pdf" target="_blank">CV</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

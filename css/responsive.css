@@ -1,0 +1,39 @@
+/* ───────── RESPONSIVE ───────── */
+
+@media (max-width:1100px) {
+    .hero, .about, .projects, footer { padding-left:4rem; padding-right:4rem; }
+    .hero h1 { font-size:4.5rem; }
+}
+
+@media (max-width:900px) {
+    .hero {
+        flex-direction:column;
+        justify-content:center;
+        gap:3rem;
+        padding:7rem 2.5rem 4rem;
+        text-align:center;
+    }
+    .hero-sub { max-width:100%; }
+    .hero-cta { justify-content:center; }
+    .hero-img-wrap img { width:260px; }
+    .hero-badge { left:50%; transform:translateX(-50%); }
+
+    .about { padding:5rem 2.5rem; }
+    .about-inner { grid-template-columns:1fr; gap:3rem; }
+
+    .projects { padding:5rem 2.5rem; }
+    .cards-grid { grid-template-columns:1fr; }
+    .projects-header { flex-direction:column; align-items:flex-start; gap:.5rem; }
+
+    footer { flex-direction:column; gap:1.5rem; text-align:center; padding:2.5rem; }
+    .foot-links { justify-content:center; }
+}
+
+@media (max-width:600px) {
+    .navbar { padding:0 1.5rem; }
+    .links { gap:1.5rem; }
+    .links a { font-size:.75rem; }
+    .hero { padding:7rem 1.5rem 3rem; }
+    .about { padding:4rem 1.5rem; }
+    .projects { padding:4rem 1.5rem; }
+}
