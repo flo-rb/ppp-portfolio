@@ -1,69 +1,65 @@
-// Curseur personnalisé
+// ── Curseur personnalisé ──
 const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursor-ring');
+const ring   = document.getElementById('cursor-ring');
+let mx = 0, my = 0, rx = 0, ry = 0;
 
-document.addEventListener('mousemove', function(e) {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    ring.style.left = e.clientX + 'px';
-    ring.style.top = e.clientY + 'px';
+document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
 });
 
+(function tick() {
+    rx += (mx - rx) * .18;
+    ry += (my - ry) * .18;
+    cursor.style.left = mx + 'px';
+    cursor.style.top  = my + 'px';
+    ring.style.left   = rx + 'px';
+    ring.style.top    = ry + 'px';
+    requestAnimationFrame(tick);
+})();
 
-// Navbar qui s'opacifie au scroll
+
+// ── Navbar au scroll ──
 const navbar = document.getElementById('navbar');
-
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 40) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
 
-// Apparition des éléments au scroll
-const elementsAReveler = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-
-const observateur = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+// ── Révélation au scroll ──
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
         }
     });
 }, { threshold: 0.15 });
-
-elementsAReveler.forEach(function(el) {
-    observateur.observe(el);
-});
+revealEls.forEach(el => obs.observe(el));
 
 
-// Scroll fluide vers les sections
-const liens = document.querySelectorAll('a[href^="#"]');
-
-liens.forEach(function(lien) {
-    lien.addEventListener('click', function(e) {
-        const cible = document.querySelector(this.getAttribute('href'));
-        if (cible) {
+// ── Scroll fluide sur les ancres ──
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
             e.preventDefault();
-            cible.scrollIntoView({ behavior: 'smooth' });
+            target.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
 
 
-// Effet tilt 3D sur les cartes
-const cartes = document.querySelectorAll('.card');
-
-cartes.forEach(function(carte) {
-    carte.addEventListener('mousemove', function(e) {
-        const rect = carte.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5;
-        const y = (e.clientY - rect.top) / rect.height - 0.5;
-        carte.style.transform = 'translateY(-10px) rotateY(' + (x * 6) + 'deg) rotateX(' + (-y * 4) + 'deg)';
+// ── Effet 3D tilt sur les cartes ──
+document.querySelectorAll('.card:not(.coming-soon)').forEach(card => {
+    card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width  - .5;
+        const y = (e.clientY - r.top)  / r.height - .5;
+        card.style.transform = `translateY(-10px) rotateY(${x * 6}deg) rotateX(${-y * 4}deg)`;
     });
-
-    carte.addEventListener('mouseleave', function() {
-        carte.style.transform = '';
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
     });
 });
